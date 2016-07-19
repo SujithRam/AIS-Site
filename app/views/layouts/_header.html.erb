@@ -7,18 +7,18 @@
 							<nav id="nav">
 								<ul>
 									<% if logged_in? %>
-									<li><%= link_to "Home",   root_path, {  :style=>"font-family:'Source Sans Pro'" } %></li>
-									<li><%= link_to "Dashboard", current_user, {  :style=>"font-family:'Source Sans Pro'" } %></li>
-									<li><%= link_to "Arriving Students", registrations_path, {  :style=>"font-family:'Source Sans Pro'" } %></li>
-									<li><%= link_to "Log out", logout_path, {  :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "Home",   root_path, { :class=>"icon fa-home", :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "Dashboard", current_user, { :class=>"icon fa-calendar", :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "Arriving Students", registrations_path, { :class=>"icon fa-users", :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "Log out", logout_path, { :class=>"icon fa-exclamation",  :style=>"font-family:'Source Sans Pro'" } %></li>
 									<% else %>
-									<li><%= link_to "Home",   root_path, {  :style=>"font-family:'Source Sans Pro'" } %></li>
-									<li><%= link_to "Events",   event_path, {  :style=>"font-family:'Source Sans Pro'" } %></a></li>
-									<li><%= link_to "Gallery",   gallery_path, {  :style=>"font-family:'Source Sans Pro'" } %></li>
-									<li><%= link_to "New Students",   newstudent_path, {  :style=>"font-family:'Source Sans Pro'" } %></li>
-									<li><%= link_to "Contact",   contact_path, {  :style=>"font-family:'Source Sans Pro'" } %></li>
-									<li><%= link_to "Student Pickup",   new_registration_path, {  :style=>"font-family:'Source Sans Pro'" } %></li>
-									<li><%= link_to "Login",   login_path, { :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "Home",   root_path, { :class=>"icon fa-home", :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "Events",   event_path, { :class=>"icon fa-calendar", :style=>"font-family:'Source Sans Pro'" } %></a></li>
+									<li><%= link_to "Gallery",   gallery_path, { :class=>"icon fa-picture-o",  :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "New Students",   newstudent_path, {:class=>"icon fa-user",  :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "Contact",   contact_path, { :class=>"icon fa-info",  :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "Student Pickup",   new_registration_path, { :class=>"icon fa-users",  :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "Login",   login_path, { :class=>"icon fa-key" , :style=>"font-family:'Source Sans Pro'" } %></li>
 									<% end %>
 								</ul>
 							</nav>
