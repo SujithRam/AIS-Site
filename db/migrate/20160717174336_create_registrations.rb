@@ -6,7 +6,7 @@ class CreateRegistrations < ActiveRecord::Migration[5.0]
       t.string :fmlocation
       t.string :flightno
       t.string :password_digest
-      t.string :landingtime
+      t.datetime :landingtime
       t.string :needpickup
       t.string :needaccom
 
