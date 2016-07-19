@@ -1,0 +1,22 @@
+<% provide(:title, 'Show_Details') %>
+<div class="row">
+  <div class="col-md-4" style="	text-indent: 10px;">
+    Welcome <b><%= @user.name %></b>
+  </div>
+  <div class="col-md-10 col-md-offset-1">
+    <p><u>You have the list of following people arriving Today:</u></p>
+    <table class="table table-striped">
+      <% @registrations.each do |user| %>
+      <tr><b><%= user.name %></b> arriving from <%= user.fmlocation %> will arrive at <b><%= user.landingtime %></b> by Flight Number <b><%= user.flightno %></b> and
+      <% if user.needpickup == "yes" %>
+      the Student <u>needs Pickup</u>
+      <% end %>
+      <% if user.needaccom == "yes" %>
+       <u> and Accommodation</u>.<br/>
+      <% end %>
+      <% end %>
+      <tr/>
+  </table>
+  </div>
+</div>
+<br/>

@@ -1,0 +1,20 @@
+<% provide(:title, 'Student details') %>
+<h1>Student full details</h1>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-8">
+    <br/>
+  <table class="table table-striped">
+      <tr><b>Name:</b> <%= @registration.name %></p></tr>
+      <tr><b>From Location:</b> <%= @registration.fmlocation %></p></tr>
+      <tr><b>Flight Number:</b> <%= @registration.flightno %></p></tr>
+      <tr><b>Landing Time:</b> <%= @registration.landingtime %></p></tr>
+      <tr><b>Does the Student needs Pickup?</b> <%= @registration.needpickup %></p></tr>
+      <tr><b>Does the Student need Accommodation?</b> <%= @registration.needaccom %></p></tr>
+      <tr><b>Email ID:</b> <%= @registration.email %></tr>
+  </table>
+  </div>
+</div>
+<br/>
+
+

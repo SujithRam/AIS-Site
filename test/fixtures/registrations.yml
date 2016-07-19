@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  fmlocation: MyString
+  flightno: MyString
+  password_digest: MyString
+  landingtime: MyString
+  needpickup: MyString
+  needaccom: MyString
+
+two:
+  name: MyString
+  email: MyString
+  fmlocation: MyString
+  flightno: MyString
+  password_digest: MyString
+  landingtime: MyString
+  needpickup: MyString
+  needaccom: MyString

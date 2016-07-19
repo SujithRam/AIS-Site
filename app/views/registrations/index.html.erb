@@ -1,0 +1,32 @@
+<% provide(:title, 'Arriving Students') %>
+<h1>Arriving Students</h1>
+<div class="table-responsive">
+<%= will_paginate %>
+  <table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <th>From Location</th>
+    <th>Flight No.</th>
+    <th>Langing Time</th>
+    <th>Need Pickup?</th>
+    <th>Need Accommodation?</th>
+    <% if current_user.admin?  %>
+      <th>Action</th>
+    <% end %>
+  </tr>
+  <% @registrations.each do |user| %>
+    <tr>
+      <td><%= link_to user.name, user, {:style=>"color: black"} %></td>
+      <td><%= link_to user.fmlocation, user, {:style=>"color: black"} %></td>
+      <td><%= link_to user.flightno, user, {:style=>"color: black"} %></td>
+      <td><%= link_to user.landingtime, user, {:style=>"color: black"} %></td>
+      <td><%= link_to user.needpickup, user, {:style=>"color: black"} %></td>
+      <td><%= link_to user.needaccom, user, {:style=>"color: black"} %></td>
+      <% if current_user.admin? %>
+      <td style="background:black"><%= link_to "Delete", user, method: :delete, data: { confirm: "You sure?" } %></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+<%= will_paginate %>
+</div>

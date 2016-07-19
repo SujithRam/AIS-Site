@@ -1,0 +1,115 @@
+<% provide(:title, "Home") %>
+			<!-- Banner -->
+				<div id="banner-wrapper">
+							<%= image_tag("banner.jpg") %>
+				</div>
+				
+			<!-- Features -->
+				<div id="features-wrapper">
+					<section id="features" class="container">
+						<div class="row">
+							<div class="4u 12u(mobile)">
+								<!-- Feature -->
+									<section>
+										<%=link_to image_tag("utsav.jpg"), utsav_path, {:class=>"image featured"} %>
+										<header>
+											<h3>Utsav-2015</h3>
+										</header>
+									</section> 
+									
+									<ul class="actions">
+										<%=link_to "More information", utsav_path, {:class=>"button icon fa-file"} %>
+									</ul>
+							</div>
+							
+							<div class="4u 12u(mobile)">
+								<!-- Feature -->
+									<section>
+										<%=link_to image_tag("holi.jpg"), event_path, {:class=>"image featured"} %>
+										<header>
+											<h3>Acadiana Holi Festival</h3>
+										</header>
+									</section>
+									
+									<ul class="actions">
+										<%=link_to "Gallery", gallery_path, {:class=>"button icon fa-file"} %>
+									</ul>
+							</div>
+							
+							<div class="4u 12u(mobile)">
+								<!-- Feature -->
+									<section>
+										<%=link_to image_tag("freshers.jpg"), newstudent_path, {:class=>"image featured"} %>
+										<header>
+											<h3>Welcome to New Students</h3>
+										</header>
+									</section>
+									
+									<ul class="actions">
+										<%=link_to "Tell Me More", newstudent_path, {:class=>"button icon fa-file"} %>
+									</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+
+			
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div id="main" class="container">
+						<div class="row">
+							<!-- Content -->
+								<div id="content" class="8u 12u(mobile)">
+									<!-- Post -->
+										<article class="box post">
+											<header>
+												<h2>Utsav</h2>
+											</header>
+											<a href="#" class="image featured"><%= image_tag("utsav.jpg") %></a>
+											<h3>A Indian Celebration</h3>
+											<p>"UTSAV" meaning festival or celebration, is the annual extravaganza of Association of Indian Students here at University of Louisiana at lafayette. AIS proudly announces its first UTSAV-2015 and invite all of you to Explore, Celebrate and Relish the traditional Indian culture blended with splendid color of modernity.</p>
+											<ul class="actions">
+												<%=link_to "Continue Reading", utsav_path, {:class=>"button icon fa-file"} %> 
+											</ul>
+										</article>
+									<!-- Post -->
+										<article class="box post">
+											<header>
+												<h2><a href="#">Achievements</a></h2>
+											</header>
+											<h3>Congratulations</h3>
+									    <p>Congratulations to Neeta Pillai, who was crowned 2nd runner up at the Miss Bollywood Pageant USA 2015, at the 3rd annual Bollywood Pageant USA 2015 at Stafford Performing Arts Theatre, Houston TX. </p>
+											<ul class="actions">
+												<%=link_to "More information", congratulations_path, {:class=>"button icon fa-file"} %>
+											</ul>
+										</article>
+									<!--More Posts-->
+								</div>
+								
+							<!-- Sidebar -->
+								<div id="sidebar" class="4u 12u(mobile)">
+									<!-- Highlights -->
+										<section>
+											<ul class="divided">
+												<li>
+													<!-- Highlight -->
+														<article class="box highlight">
+															<header>
+																<h3><a href="#">About AIS</a></h3>
+															</header>
+															<a href="#" class="image left"><%= image_tag("aislogo.jpg", size: "110x110") %></a>
+															<p>Established in 1996, the Association of Indian Students (AIS) is one of the largest international student community at UL Lafayette. The primary goal of this organization is to serve as a gateway between Indian students and Ragin Cajun culture. It aims to promote Indian culture and heritage at UL and through out Acadiana. AIS organizes numerous events around the year that include cultural shows, sports tournaments, movie screenings and various festival celebrations. </p>
+															<ul class="actions">
+																<li><a href="#" class="button icon fa-file">Learn More</a></li>
+															</ul>
+														</article>
+													<!--More Highlights-->
+												</li>
+											</ul>
+										</section>
+								</div>
+						<!--Single row complete-->
+						</div>
+					</div>
+				</div>

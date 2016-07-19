@@ -1,0 +1,27 @@
+<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header" class="container">
+	
+						<h1 id="logo"><%= image_tag("aislogo.jpg") %></h1>
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<% if logged_in? %>
+									<li><%= link_to "Home",   root_path, { :class=>"glyphicon glyphicon-home", :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "Dashboard", current_user, { :class=>"glyphicon glyphicon-earphone", :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "Arriving Students", registrations_path, { :class=>"glyphicon glyphicon-home", :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "Log out", logout_path, { :class=>"glyphicon glyphicon-earphone", :style=>"font-family:'Source Sans Pro'" } %></li>
+									<% else %>
+									<li><%= link_to "Home",   root_path, { :class=>"glyphicon glyphicon-home", :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "Events",   event_path, { :class=>"glyphicon glyphicon-calendar", :style=>"font-family:'Source Sans Pro'" } %></a></li>
+									<li><%= link_to "Gallery",   gallery_path, { :class=>"glyphicon glyphicon-camera", :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "New Students",   newstudent_path, { :class=>"glyphicon glyphicon-user", :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "Contact",   contact_path, { :class=>"glyphicon glyphicon-earphone", :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "Student Pickup",   new_registration_path, { :class=>"glyphicon glyphicon-earphone", :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "Login",   login_path, { :class=>"glyphicon glyphicon-earphone", :style=>"font-family:'Source Sans Pro'" } %></li>
+									<% end %>
+								</ul>
+							</nav>
+
+					</div>
+				</div>
