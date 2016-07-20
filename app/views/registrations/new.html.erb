@@ -5,10 +5,10 @@
     <%= form_for(@registration) do |f| %>
       <%= render 'shared/error_messages' %>
 
-      <%= f.label :name %>
+      <%= f.label :name, "Full Name" %>
       <%= f.text_field :name, class: 'form-control' %>
 
-      <%= f.label :fmlocation %>
+      <%= f.label :fmlocation, "Arriving From" %>
       <%= f.text_field :fmlocation, class: 'form-control' %>
       
       <%= f.label :needpickup, 'Need Pickup?' %>
@@ -20,8 +20,8 @@
       <%= f.label :flightno, "Flight Number" %>
       <%= f.text_field :flightno, class: 'form-control' %>
       
-      <%= f.label :landingtime, "Flight Landing Time" %>
-      <%= f.text_field :landingtime, class: 'form-control' %>
+      <%= f.label :landingtime, "Flight Landing Date and Time" %>
+      <%= f.text_field :landingtime, class: 'form-control', placeholder: "DD/MM/YYYY HH:MM" %>
       
       <%= f.label :email %>
       <%= f.email_field :email, class: 'form-control' %> 
@@ -29,7 +29,7 @@
       <%= f.label :password, "PIN" %>
       <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.label :password_confirmation, "PIN Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
       <br/>
       <%= f.submit "Submit my details", class: "btn btn-primary" %>

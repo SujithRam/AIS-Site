@@ -25,7 +25,7 @@ class RegistrationsController < ApplicationController
     if @registration.save
       #UserMailer.signup_confirmation(@user).deliver
       #log_in @user
-      flash[:success] = "Your details has been registered. A confirmation email has been sent to you."
+      flash[:success] = "Your details has been registered."
       redirect_to root_url
     else
       render 'new'
