@@ -2501,13 +2501,12 @@
 	}
 
 	@font-face{
-		font-family:'FontAwesome';
+		font-family:'fontawesome';
 		src:font-url('fontawesome-webfonte0a5.eot');
 		src:font-url('fontawesome-webfontd41d.eot?#iefix') format('embedded-opentype'),
-		font-url('fontawesome-webfonte0a5.html') format('woff2'),
-		font-url('fonts/fontawesome-webfonte0a5.woff') format('woff'),
-		font-url('fontawesome-webfonte0a5.ttf') format('truetype'),
-		font-url('fontawesome-webfonte0a5.svg') format('svg');
+		url('fontawesome-webfonte0a5.woff') format('woff'),
+		url('fontawesome-webfonte0a5.ttf') format('truetype'),
+		url('fontawesome-webfonte0a5.svg#icons') format('svg');
 		font-weight:normal;
 		font-style:normal}.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;
 		font-size:inherit;
