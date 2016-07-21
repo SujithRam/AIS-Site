@@ -1,3 +1,16 @@
-<p>Hello, <%= @registration.name %></p>
-<p>Welcome to our E-Commerce App</p>
-<p>Thank you for signing up.</p>
+<p>Hello <%= @registration.name %>,</p>
+<p>Thankyou for taking your time out to fill-up the form.</p>
+<p>First of all heartly Welcome to <b>UNIVERSITY OF LOUISIANA AT LAFAYETTE</b> on behalf of <i style="color: Red">Asociation of Indian Students.</i></p>
+<p>Congratulations on your admission to UL @ Lafayette.</p>
+<p>Just for review purpose these are the details you provided:</p>
+<table border="0">
+      <tr><b>From Location:</b> <%= @registration.fmlocation %></p></tr>
+      <tr><b>Flight Number:</b> <%= @registration.flightno %></p></tr>
+      <tr><b>Landing Time:</b> <%= @registration.landingtime %></p></tr>
+      <tr><b>Need Pickup?</b> <%= @registration.needpickup %></p></tr>
+      <tr><b>Need Accommodation?</b> <%= @registration.needaccom %></p></tr>
+      <tr><b>Email ID:</b> <%= @registration.email %></tr>
+</table>
+<p>Have a safe trip to United States and Welcome to U.S.</p>
+
+<p style="text-align: right">AIS Team</p>
