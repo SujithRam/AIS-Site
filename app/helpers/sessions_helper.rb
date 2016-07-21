@@ -1,12 +1,28 @@
 module SessionsHelper
   # Logs in the given user.
+  attr_accessor :normuser
+  
   def log_in(user)
     session[:user_id] = user.id
+    session[:email] = user.email
+  end
+  
+  def log_in_student(user)
+    session[:user_id_s] = user.id
+    session[:email] = user.email
   end
 
   # Returns the current logged-in user (if any).
   def current_user
-    @current_user ||= User.find_by(id: session[:user_id])
+    if session[:user_id].nil?
+      if (user_id_s = session[:user_id_s])
+        @current_user ||= Registration.find_by(id: user_id_s)
+      end
+    else
+      if (user_id = session[:user_id])
+        @current_user ||= User.find_by(id: user_id)
+      end
+    end
   end
   
   # Returns true if the user is logged in, false otherwise.
@@ -14,9 +30,14 @@ module SessionsHelper
     !current_user.nil?
   end
   
+  def logged_normuser?
+    current_user.normuser == true
+  end
+  
   # Logs out the current user.
   def log_out
     session.delete(:user_id)
+    session.delete(:user_id_s)
     @current_user = nil
   end
   

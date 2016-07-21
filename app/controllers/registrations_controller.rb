@@ -1,8 +1,23 @@
 class RegistrationsController < ApplicationController
   before_action :logged_in_user, only: [:index, :destroy, :show]
+  before_action :login_admin, only:[:index]
   
   def new
     @registration = Registration.new
+  end
+  
+  def edit
+    @registration = Registration.find(params[:id])
+  end
+  
+  def update
+    @registration = Registration.find(params[:id])
+    if @registration.update_attributes(registration_params)
+      flash[:success] = "Profile updated"
+      redirect_to registration_path
+    else
+      render 'edit'
+    end
   end
   
   def index
@@ -46,6 +61,13 @@ class RegistrationsController < ApplicationController
   
   def admin_user
       redirect_to(registrations_path) unless current_user.admin?
+  end
+  
+  def login_admin
+      unless User.exists?(email: session[:email].downcase)
+      redirect_to root_url
+      flash[:danger] = "Administrator is only allowed to access registrations index page." 
+      end
   end
   
   private
