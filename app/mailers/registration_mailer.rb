@@ -8,6 +8,6 @@ class RegistrationMailer < ApplicationMailer
   
   def signup_confirmation(registration)
     @registration = registration
-    mail to: registration.email, subject: "Welcome to our app"
+    mail to: @registration.email, subject: "Welcome to our app"
   end
 end
