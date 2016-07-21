@@ -23,7 +23,7 @@ class RegistrationsController < ApplicationController
     @registration = Registration.new(registration_params)    #userdetail_params is defined below
     params[:registration][:landingtime] = params[:registration][:landingtime].to_datetime
     if @registration.save
-      #UserMailer.signup_confirmation(@user).deliver
+      RegistrationMailer.signup_confirmation(@registration).deliver
       #log_in @user
       flash[:success] = "Your details has been registered."
       redirect_to root_url
