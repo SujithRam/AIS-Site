@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get 'newstudent' => 'static_pages#newstudent'
   get 'congratulations' => 'static_pages#congratulations'
   get 'independenceday' => 'static_pages#independenceday'
+  get 'independenceday1' => 'static_pages#independenceday1'
   get 'utsav' => 'static_pages#utsav'
   get    '/login' => 'sessions#new'
   post   '/login' => 'sessions#create'
