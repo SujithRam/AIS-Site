@@ -1,0 +1,2 @@
+class UtsavRegistration < ApplicationRecord
+end
