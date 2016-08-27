@@ -15,7 +15,7 @@
       <%= f.text_field :phone, class: 'form-control' %>
       
       <%= f.label :typeofpart, 'Type of Participation' %>
-      <%= f.select :typeofpart, [['Dance','Dance'],['Singing','Singing'],['Playing Instrument','Instrument'],['Fashion Show','Fashion_Show'],['Others','Others']], class: 'form-control' %>
+      <%= f.select(:typeofpart, [ ['Dance','Dance'],['Singing','Singing'],['Playing Instrument','Instrument'],['Fashion Show','Fashion_Show'],['Others','Others'] ],{}, {:multiple => true, class: "form-control", style: "height:107px"}) %>
       
       <div id="to_hide">
       <%= f.label :otheractiv, "Other Activity Details" %>

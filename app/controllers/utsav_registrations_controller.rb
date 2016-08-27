@@ -7,10 +7,10 @@ class UtsavRegistrationsController < ApplicationController
   end
   
   def create
+    params[:utsav_registration][:typeofpart] = params[:utsav_registration][:typeofpart].delete_if{ |x| x.empty? } #deletes first space from array created by multi select and that space is created by rails by default.
     @utsav_registration = UtsavRegistration.new(utsav_registration_params)    #userdetail_params is defined below
     if @utsav_registration.save
       UtsavRegistrationMailer.details_confirmation(@utsav_registration).deliver
-      #log_in @user
       flash[:success] = "Your details have been registered. A confirmation email has been sent."
       redirect_to root_url
     else
@@ -63,6 +63,6 @@ class UtsavRegistrationsController < ApplicationController
   
   private
   def utsav_registration_params
-      params.require(:utsav_registration).permit(:name, :email, :phone, :typeofpart, :otheractiv, :group, :grpdetails)
+      params.require(:utsav_registration).permit(:name, :email, :phone, :otheractiv, :group, :grpdetails, :typeofpart => [])
   end
 end
