@@ -1,0 +1,24 @@
+<% provide(:title, 'Participant details') %>
+<h1>UTSAV Participant full details</h1>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-8">
+    <br/>
+  <table class="table table-striped">
+      <tr><b>Name:</b> <%= @utsav_registration.name %></p></tr>
+      <tr><b>Phone:</b> <%= @utsav_registration.phone %></p></tr>
+      <tr><b>Email:</b> <%= @utsav_registration.email %></p></tr>
+      <tr><b>Type of Participation:</b> <%= @utsav_registration.typeofpart %></p></tr>
+      <% if @utsav_registration.otheractiv != "" %> 
+      <tr><b>Other Activity Details:</b> <%= @utsav_registration.otheractiv %></p></tr>
+      <% end %>
+      <% if @utsav_registration.group != "No" %>
+      <tr><b>Does the Student have a group?</b> <%= @utsav_registration.group %></p></tr>
+      <tr><b>Group Details:</b> <%= @utsav_registration.grpdetails %></tr>
+      <% end %>
+  </table>
+  </div>
+</div>
+<br/>
+
+

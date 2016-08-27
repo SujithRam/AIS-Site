@@ -1,8 +1,8 @@
-<% provide(:title, 'Utasav-Signup') %>
-<h1>Utsav Participants Registration Request</h1>
+<% provide(:title, 'Update Participant details') %>
+<h1>Utsav Participants Registration Request - UPDATE</h1>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@utsav_registration) do |f| %>
+     <%= form_for(@utsav_registration) do |f| %>
       <%= render 'shared/error_messages2' %>
 
       <%= f.label :name, "Full Name" %>
@@ -15,21 +15,20 @@
       <%= f.text_field :phone, class: 'form-control' %>
       
       <%= f.label :typeofpart, 'Type of Participation' %>
-      <%= f.select :typeofpart, [['Dance','Dance'],['Singing','Singing'],['Playing Instrument','Instrument'],['Fashion Show','Fashion_Show'],['Others','Others']], class: 'form-control' %>
+      <%= f.select :typeofpart, [['Volunteer','Volunteer'],['Dance','Dance'],['Singing','Singing'],['Playing Instrument','Instrument'],['Fashion Show','Fashion_Show'],['Others','Others']], class: 'form-control' %>
       
       <div id="to_hide">
       <%= f.label :otheractiv, "Other Activity Details" %>
       <%= f.text_area :otheractiv, class: 'form-control' %>
       </div>
       
-      <%= f.label :group, 'Do you have a group? If YES check the box' %>
+      <%= f.label :group, 'Do you have a group? If YES' %>
       <%= f.check_box :group, {}, "Yes", "No" %>
       
       <div id="group_details" style="display:none;">
         <%= f.label :grpdetails, "Group Details" %>
         <%= f.text_area :grpdetails, class: 'form-control' %>
       </div>
-    
       <br/>
       <br/>
       <%= f.submit "Submit my details", class: "btn btn-primary" %>
@@ -38,23 +37,3 @@
   </div>
 </div>
 <br/>
-<script>
-  $(document).ready(function(){
-     if($('#utsav_registration_typeofpart').val() != "Others"){
-        $("#to_hide").css('display','none')
-     }
-     else{
-        $("#to_hide").css('display','block')
-     }
-
-     $('#utsav_registration_typeofpart').change(function(){
-        if($(this).val() != "Others"){
-          $("#to_hide").css('display','none')
-        }
-        else{
-          $("#to_hide").css('display','block')
-        }
-     })
-  });
-
-</script>
