@@ -1,0 +1,16 @@
+<p>Hello <%= @utsav_registration.name %>,</p>
+<p>Please review your details below:</p>
+<table border="0">
+      <tr><b>Type of Participation:</b> <%= @utsav_registration.typeofpart %></p></tr>
+      <% if @utsav_registration.otheractiv != "" %> 
+      <tr><b>Other Activity Details:</b> <%= @utsav_registration.otheractiv %></p></tr>
+      <% end %>
+      <% if @utsav_registration.group != "No" %>
+      <tr><b>Does the Student have a group?</b> <%= @utsav_registration.group %></p></tr>
+      <tr><b>Group Details:</b> <%= @utsav_registration.grpdetails %></tr>
+      <% end %>
+</table>
+<p><b>** If you need to update any information, contact one of the  Co-ordinators through the contact us page.</b></p>
+<br/><br/>
+<p style="text-align: Left">Regards,</p>
+<p style="text-align: Left"><b>AIS Team</b></p>

@@ -9,7 +9,7 @@ class UtsavRegistrationsController < ApplicationController
   def create
     @utsav_registration = UtsavRegistration.new(utsav_registration_params)    #userdetail_params is defined below
     if @utsav_registration.save
-      #RegistrationMailer.signup_confirmation(@registration).deliver
+      UtsavRegistrationMailer.details_confirmation(@utsav_registration).deliver
       #log_in @user
       flash[:success] = "Your details have been registered. A confirmation email has been sent."
       redirect_to root_url
