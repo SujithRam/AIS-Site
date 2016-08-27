@@ -1,6 +1,11 @@
-<p>Hello <%= @utsav_registration.name %>,</p>
-<p>Please review your details below:</p>
-<table border="0">
+
+<!-- Inliner Build Version 4380b7741bb759d6cb997545f3add21ad48f010b -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head>
+<wrapper class="header" style="background: #8a8a8a none repeat top left scroll;"><container><row class="collapse"><columns small="6"><%= image_tag attachments['banner.jpeg'].url %></columns><columns small="6"><p class="text-right" style="color: #fff; padding-top: 15px;">BASIC</p>
+      </columns></row></container></wrapper><container><spacer size="16"><row><columns small="12"><h1>Hi, <%= @utsav_registration.name %></h1>
+      <p class="lead">Please review your details below:</p>
+      <table border="0">
       <tr><b>Type of Participation:</b> <%= @utsav_registration.typeofpart %></p></tr>
       <% if @utsav_registration.otheractiv != "" %> 
       <tr><b>Other Activity Details:</b> <%= @utsav_registration.otheractiv %></p></tr>
@@ -9,8 +14,14 @@
       <tr><b>Does the Student have a group?</b> <%= @utsav_registration.group %></p></tr>
       <tr><b>Group Details:</b> <%= @utsav_registration.grpdetails %></tr>
       <% end %>
-</table>
-<p><b>** If you need to update any information, contact one of the  Co-ordinators through the contact us page.</b></p>
-<br/><br/>
-<p style="text-align: Left">Regards,</p>
-<p style="text-align: Left"><b>AIS Team</b></p>
+      </table>
+      <callout class="primary"><p> ** If you need to update any information, contact one of the  Co-ordinators through the contact us page.</p>
+      </callout></columns></row>
+      <p style="text-align: Left">Regards,</p>
+      <p style="text-align: Left"><b>AIS Team</b></p><wrapper class="secondary"><spacer size="16"><row><columns large="6"><h5>Connect With Us:</h5>
+        <button class="facebook expand" href="https://www.facebook.com/Association-of-Indian-Students-UL-1031711476885209/?fref=ts">Facebook</button>
+      </columns><columns large="6"><h5>Contact Info:</h5>
+        <p>Phone: 337-806-0763</p>
+        <p>Email: <a href="mailto:ais.ullafayette@gmail.com">ais.ullafayette@gmail.com</a></p>
+      </columns></row></spacer></wrapper></spacer></container>
+</head></html>
