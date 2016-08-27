@@ -6,7 +6,7 @@ class UtsavRegistrationMailer < ApplicationMailer
   default from: "no-reply@aisullafayette.com"
   
   def details_confirmation(utsav_registration)
-    attachments.inline['aislogo_opti.jpg'] = File.read('aislogo_opti.jpg')
+    attachments.inline['aislogo_opti.jpg'] = File.read(File.join(Rails.root, 'app','assets', 'images','aislogo_opti.jpg'))
     @utsav_registration = utsav_registration
     mail(:to => @utsav_registration.email, :subject => "Association of Indian Students", :bcc => "ais.ullafayette@gmail.com")
   end
