@@ -27,7 +27,7 @@ class UtsavSeatsController < ApplicationController
       @utsav_seat = UtsavSeat.new(utsav_seat_params) 
       if @utsav_seat.save
         #mail confirmation TODO
-        if @utsav_seat.member.eql? "YES"
+        if @utsav_seat.member.eql? "Yes"
         UtsavSeatMailer.indian_details_confirmation(@utsav_seat).deliver
         else
         UtsavSeatMailer.details_confirmation(@utsav_seat).deliver
