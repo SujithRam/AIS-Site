@@ -1,0 +1,2 @@
+module UtsavSeatsHelper
+end

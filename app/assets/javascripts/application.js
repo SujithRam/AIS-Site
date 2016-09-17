@@ -13,12 +13,9 @@
 //= require jquery
 //= require jquery_ujs 
 //= require bootstrap
-//= require jquery.dropotron.min.js
-//= require jquery.min.js
 //= require main.js
 //= require util.js
 //= require turbolinks
 //= require moment
-//= require bootstrap-datetimepicker
 //= require_tree .
 

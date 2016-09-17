@@ -1,0 +1,22 @@
+<% provide(:title, 'Seat Registration details') %>
+<h1>UTSAV Participant Seat Registration full details</h1>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-8">
+    <br/>
+  <table class="table table-striped">
+      <tr><b>Name:</b> <%= @utsav_seat.name %></p></tr>
+      <tr><b>Phone:</b> <%= @utsav_seat.phone %></p></tr>
+      <tr><b>Email:</b> <%= @utsav_seat.email %></p></tr>
+      <tr><b>Confirmation Number:</b> <%= @utsav_seat.confirmation %></p></tr>
+      <% if @utsav_seat.member != "No" %>
+      <tr><b>Is the student current UL Student?</b> <%= @utsav_seat.group %></p></tr>
+      <% end %> 
+      <% if @utsav_seat.group != "No" %>
+      <tr><b>Does the Student have a group?</b> <%= @utsav_seat.group %></p></tr>
+      <tr><b>Group Details:</b> <%= @utsav_seat.grpdetails %></tr>
+      <% end %>
+  </table>
+  </div>
+</div>
+<br/>

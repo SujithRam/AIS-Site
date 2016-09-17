@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'sessions/new'
 
   get 'registrations/new'
@@ -27,6 +28,7 @@ Rails.application.routes.draw do
   resources :users
   resources :registrations
   resources :utsav_registrations
+  resources :utsav_seats
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,0 +1,12 @@
+<% if @utsav_seat.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      The form contains <%= pluralize(@utsav_seat.errors.count, "error") %>.
+    </div>
+    <ul>
+    <% @utsav_seat.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

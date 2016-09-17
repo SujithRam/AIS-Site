@@ -1,0 +1,49 @@
+<% provide(:title, 'Utasav-Seats-Reservation') %>
+<h1>Utsav Seats Registration Request</h1>
+</br><p style="color: blue">Number of seats remaining: <b><%= @utsav_seat.data %></b></p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@utsav_seat) do |f| %>
+      <%= render 'shared/error_messages3' %>
+
+      <%= f.label :name, "Full Name" %>
+      <%= f.text_field :name, class: 'form-control' %>
+      
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %> 
+
+      <%= f.label :phone, "Contact Number" %>
+      <%= f.text_field :phone, class: 'form-control' %>
+      
+      <%= f.label :member, 'Are you a member of "The Association of Indian Students - ULL"? If YES check the box' %>
+      <%= f.check_box :member, {}, "Yes", "No" %>
+      
+      <%= f.label :group, 'Do you have a group? If YES check the box (Max: 3 People)' %>
+      <%= f.check_box :group, {}, "Yes", "No" %>
+      
+      <%= f.hidden_field :people, :value => 0, class: 'form-control' %>
+      
+      <div id="group_details" style="display:none;">
+        <%= f.label :grpdetails, "Group Details with their Full names" %>
+        <%= f.text_area :grpdetails, class: 'form-control' %>
+      </div>
+    
+      <br/>
+      <br/>
+      <%= f.submit "Reserve my Seats", class: "btn btn-primary" %>
+    <% end %>
+    <br/>
+  </div>
+</div>
+<br/>
+	<script type="text/javascript">
+      var checkbox = document.getElementById('utsav_seat_group');
+      var details_div = document.getElementById('group_details');
+      checkbox.onchange = function() {
+       if(this.checked) {
+         details_div.style['display'] = 'block';
+       } else {
+         details_div.style['display'] = 'none';
+       }
+    };
+    </script>
