@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get 'independenceday' => 'static_pages#independenceday'
   get 'independenceday1' => 'static_pages#independenceday1'
   get 'utsav' => 'static_pages#utsav'
+  get 'utsav1' => 'static_pages#utsav1'
   get    '/login' => 'sessions#new'
   post   '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'

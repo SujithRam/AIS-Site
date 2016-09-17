@@ -26,7 +26,6 @@ class UtsavSeatsController < ApplicationController
       params[:utsav_seat][:confirmation] = generate_code(5)
       @utsav_seat = UtsavSeat.new(utsav_seat_params) 
       if @utsav_seat.save
-        #mail confirmation TODO
         if @utsav_seat.member.eql? "Yes"
         UtsavSeatMailer.indian_details_confirmation(@utsav_seat).deliver
         else
