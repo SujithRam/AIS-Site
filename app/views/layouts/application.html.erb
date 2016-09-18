@@ -10,6 +10,46 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
       </script>
     <![endif]-->
+    
+    <!-- CSS for dropdowns -->
+    <style>
+      li a, .dropbtn {
+          display: inline-block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+      }
+      
+      li a:hover, .dropdown:hover .dropbtn {
+          
+      }
+      
+      li.dropdown {
+          display: inline-block;
+      }
+      
+      .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 200px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      }
+      
+      .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+      }
+      
+      .dropdown-content a:hover {background-color: #800909; color: white;}
+  
+      .show {display:block;}
+      
+    </style>
   </head>
 
   <body class="homepage">
@@ -23,16 +63,57 @@
 			</div>
 			<%= render 'layouts/footer' %><!--style for Header is wriiten in file _header.html.erb-->
 		</div>
+		
 		<script type="text/javascript">
+		/* Code for checkbox in utsav_registrations/new */ 
       var checkbox = document.getElementById('utsav_registration_group');
       var details_div = document.getElementById('group_details');
       checkbox.onchange = function() {
-       if(this.checked) {
-         details_div.style['display'] = 'block';
-       } else {
-         details_div.style['display'] = 'none';
-       }
-    };
+         if(this.checked) {
+           details_div.style['display'] = 'block';
+         } else {
+           details_div.style['display'] = 'none';
+         }
+      };
+    /* code end */
+    
+    /* Code for New Student Dropdown, When the user clicks on the button, toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var d = 0; d < dropdowns.length; d++) {
+          var openDropdown = dropdowns[d];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    /* code end */
+
+    /* Code for Utsav  Dropdown, When the user clicks on the button, toggle between hiding and showing the dropdown content */
+    function myFunction1() {
+        document.getElementById("myDropdown1").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var d = 0; d < dropdowns.length; d++) {
+          var openDropdown = dropdowns[d];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    /* code end */
     </script>
   </body>
 </html>
