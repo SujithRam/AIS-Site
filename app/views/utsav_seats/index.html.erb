@@ -7,7 +7,7 @@
 <% end %></br>
 
 <%= form_tag(utsav_seats_path, :method => "get", id: "search-form1") do %><p>
-<%= text_field_tag :search1, params[:search], placeholder: "Search Names or Group Details", class: "form-control" %></br>
+<%= text_field_tag :search1, params[:search1], placeholder: "Search Names or Group Details", class: "form-control" %></br>
 <%= submit_tag "Search",  class: "btn btn-primary" %></p>
 <% end %>
 
