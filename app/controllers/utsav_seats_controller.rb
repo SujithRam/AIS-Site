@@ -52,6 +52,17 @@ class UtsavSeatsController < ApplicationController
   end
   
   def edit
+    @utsav_seat = UtsavSeat.find(params[:id])
+  end
+  
+  def update
+    @utsav_seat = UtsavSeat.find(params[:id])
+    if @utsav_seat.update_attributes(utsav_seat_params)
+      flash[:success] = "Details updated"
+      redirect_to utsav_seats_path
+    else
+      render 'edit'
+    end
   end
   
   def destroy
@@ -77,7 +88,7 @@ class UtsavSeatsController < ApplicationController
   
   private
   def utsav_seat_params
-      params.require(:utsav_seat).permit(:name, :email, :phone, :group, :grpdetails, :people, :member, :confirmation)
+      params.require(:utsav_seat).permit(:name, :email, :phone, :group, :grpdetails, :people, :member, :confirmation, :tableno)
   end
   
   def generate_code(number)

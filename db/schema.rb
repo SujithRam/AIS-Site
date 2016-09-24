@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160917015436) do
+ActiveRecord::Schema.define(version: 20160924135042) do
 
   create_table "registrations", force: :cascade do |t|
     t.string   "name"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20160917015436) do
     t.integer  "people"
     t.string   "member"
     t.string   "confirmation"
+    t.string   "tableno"
   end
 
 end

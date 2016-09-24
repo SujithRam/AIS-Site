@@ -15,7 +15,7 @@
     <th>Phone</th>
     <th>Is the student current UL Student?</th>
     <th>Does the person have a group?</th>
-   <!-- <th>Edit Details</th> -->
+    <th>Edit Details</th>
     <% if current_user.admin?  %>
       <th>Action</th>
     <% end %>
@@ -27,7 +27,7 @@
       <td><%= link_to user.phone, user, {:style=>"color: black"} %></td>
       <td><%= link_to user.member, user, {:style=>"color: black"} %></td>
       <td><%= link_to user.group, user, {:style=>"color: black"} %></td>
-      <!-- <td style="background:blue"><#%= link_to "Edit Details", edit_utsav_seat_path(user) %></td> -->
+      <td style="background:blue"><%= link_to "Edit Details", edit_utsav_seat_path(user) %></td>
       <% if current_user.admin? %>
       <td style="background:black"><%= link_to "Delete", user, method: :delete, data: { confirm: "You sure?" } %></td>
       <% end %>

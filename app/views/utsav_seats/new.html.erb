@@ -22,6 +22,7 @@
       <%= f.check_box :group, {}, "Yes", "No" %>
       
       <%= f.hidden_field :people, :value => 0, class: 'form-control' %>
+      <%= f.hidden_field :tableno, :value => 0, class: 'form-control' %>
       
       <div id="group_details" style="display:none;">
         <%= f.label :grpdetails, "Group Details with their Full names" %>
