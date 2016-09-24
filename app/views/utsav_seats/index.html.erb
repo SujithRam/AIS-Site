@@ -1,5 +1,11 @@
 <% provide(:title, 'Utsav Seat Reservation') %>
-<h1>Utsav Seat Reservation</h1>
+<h1>Utsav Seat Reservation - Confirmation Search</h1>
+
+<%= form_tag(utsav_seats_path, :method => "get", id: "search-form") do %><p>
+<%= text_field_tag :search, params[:search], placeholder: "Search Posts", class: "form-control" %></br>
+<%= submit_tag "Search",  class: "btn btn-primary" %></p>
+<% end %>
+
 <div class="table-responsive">
 <%= will_paginate %>
   <table class="table table-striped">

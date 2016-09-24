@@ -6,4 +6,8 @@ class UtsavSeat < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX }
   TAG_REG = /\A([a-z\s]+)(,\s*[a-z\s]+)*\Z/i
   validates :grpdetails, :allow_blank => true, format: { with: TAG_REG, :message => "Invalid format, Use comma to seperate names." }
+  
+  def self.search(search)
+    where("confirmation LIKE ?", "%#{search}%") 
+  end
 end

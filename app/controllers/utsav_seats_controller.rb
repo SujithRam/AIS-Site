@@ -3,7 +3,12 @@ class UtsavSeatsController < ApplicationController
   before_action :login_admin, only:[:index, :destroy]
   
   def index
-    @utsav_seats = UtsavSeat.paginate(page: params[:page])
+    #@utsav_seats = UtsavSeat.paginate(page: params[:page])
+    if params[:search]
+      @utsav_seats = UtsavSeat.search(params[:search]).order("created_at DESC").paginate(page: params[:page])
+    else
+      @utsav_seats = UtsavSeat.paginate(page: params[:page])
+    end
   end
 
   def new
