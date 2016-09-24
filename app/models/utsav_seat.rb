@@ -10,4 +10,8 @@ class UtsavSeat < ApplicationRecord
   def self.search(search)
     where("confirmation LIKE ?", "%#{search}%") 
   end
+  
+  def self.search1(search)
+    where('name LIKE :search OR grpdetails LIKE :search', search: "%#{search}%") 
+  end
 end

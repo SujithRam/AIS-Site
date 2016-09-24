@@ -9,6 +9,12 @@ class UtsavSeatsController < ApplicationController
     else
       @utsav_seats = UtsavSeat.paginate(page: params[:page])
     end
+    
+    if params[:search1]
+      @utsav_seats = UtsavSeat.search1(params[:search1]).order("created_at DESC").paginate(page: params[:page])
+    else
+      @utsav_seats = UtsavSeat.paginate(page: params[:page])
+    end
   end
 
   def new
