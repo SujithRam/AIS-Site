@@ -34,6 +34,10 @@ module SessionsHelper
     current_user.normuser == true
   end
   
+  def logged_adminuser?
+    current_user.admin == true
+  end
+  
   # Logs out the current user.
   def log_out
     session.delete(:user_id)

@@ -1,0 +1,27 @@
+<% provide(:title, 'Registration Disable') %>
+<h2>Settings Page</h2>
+<h1>Danger Section:</h1>
+ <% if current_user.admin?  %>
+<div class="table-responsive">
+  <table class="table table-striped">
+  <tr>
+    <th>Action Type</th>
+    <th>Action</th>
+  </tr>
+  <tr>
+    <!--<td><#%= link_to 'Delete all the Student Details?', {:style=>"color: black"} %></td>-->
+    <td>Delete all the Student Details?</td>
+    <td style="background:black"><%= link_to 'Delete', remove_all_students_reg_disables_path, method: :delete, data: { confirm: 'Are you sure? This Action cannot be reverted.' } %></td>
+  </tr>
+  <tr>
+    <td>Delete all the Utsav Participant Registrations?</td>
+    <td style="background:black"><%= link_to 'Delete', remove_all_utsav_registrations_reg_disables_path, method: :delete, data: { confirm: 'Are you sure? This Action cannot be reverted.' } %></td>
+  </tr>
+  <tr>
+    <td>Delete all the Utsav Seat Registrations?</td>
+    <td style="background:black"><%= link_to 'Delete', remove_all_utsav_seats_reg_disables_path, method: :delete, data: { confirm: 'Are you sure? This Action cannot be reverted.' } %></td>
+  </tr>
+</table>
+</div>
+<br/>
+<% end %>

@@ -1,0 +1,2 @@
+module RegDisablesHelper
+end

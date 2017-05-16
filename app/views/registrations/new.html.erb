@@ -1,8 +1,7 @@
 <% provide(:title, 'Signup') %>
 <h1>Student Pickup & Accommodation Request</h1>
-<p></br> Thank you for your Interest. Pickup and Accommodation registrations will open in <b>December 2016</b> for <b>Spring 2017</b>.</p>
 
-<% if false %>          <!-- Remove this statement to make the form work again-->
+<% if @data.studentreg.to_s == 'true' %>          <!-- Remove this statement to make the form work again-->
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@registration) do |f| %>
@@ -42,5 +41,8 @@
 </div>
 <br/>
 <p><b>Note: </b>A nominal membership fee of <b>$25</b> will be collected from every student upon arrival .</p>
+<% else %>
 
- <% end %>                     <!-- Remove this statement to make the form work again-->
+<p></br> Thank you for your Interest. Pickup and Accommodation registrations will open in <b>December 2016</b> for <b>Spring 2017</b>.</p>
+
+<% end %>                     <!-- Remove this statement to make the form work again-->

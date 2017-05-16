@@ -4,7 +4,9 @@
     <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js" %>
     <%= javascript_include_tag "custom" %>
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
@@ -28,7 +30,7 @@
       
       .dropdown-content a {
           color: black;
-          padding: 12px 16px;
+          padding: 12px 14px;
           text-decoration: none;
           display: block;
           text-align: left;
@@ -71,26 +73,12 @@
     function myFunction() {
       document.getElementById("myDropdown").classList.toggle("show");
     }
-
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(e) {
-      if (!e.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        for (var d = 0; d < dropdowns.length; d++) {
-          var openDropdown = dropdowns[d];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    }
-    /* code end */
-
+    
     /* Code for Utsav  Dropdown, When the user clicks on the button, toggle between hiding and showing the dropdown content */
     function myFunction1() {
         document.getElementById("myDropdown1").classList.toggle("show");
     }
-    
+
     // Close the dropdown if the user clicks outside of it
     window.onclick = function(e) {
       if (!e.target.matches('.dropbtn')) {
@@ -104,6 +92,7 @@
       }
     }
     /* code end */
+    
     </script>
   </body>
 </html>

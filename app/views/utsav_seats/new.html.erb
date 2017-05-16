@@ -1,8 +1,7 @@
 <% provide(:title, 'Utasav-Seats-Reservation') %>
 <h1>Utsav Seats Registration Request</h1>
-<p></br> Thank you everyone for making UTSAV 2016 a grand success. Will see you back in UTSAV 2017</p>
 
-<% if false %>          <!-- Remove this statement to make the form work again-->
+<% if @data.utsavseatreg.to_s == 'true' %>       <!-- Remove this statement to make the form work again-->
 </br><p style="color: blue">Number of seats remaining: <b><%= @utsav_seat.data %></b></p>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -50,4 +49,6 @@
        }
     };
   </script>
- <% end %>                     <!-- Remove this statement to make the form work again-->
+<% else %>
+<p></br> Thank you everyone for making UTSAV 2016 a grand success. Will see you back in UTSAV 2017</p>
+<% end %>                     <!-- Remove this statement to make the form work again-->

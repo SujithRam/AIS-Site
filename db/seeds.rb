@@ -25,3 +25,7 @@ User.create!(name:  "Aditya Kaveeshwar",
              email: "ark5895@louisiana.edu",
              password:              "Padmanabh12#",
              password_confirmation: "Padmanabh12#", admin: false, normuser: true)
+             
+RegDisable.create!(studentreg: "true",
+             utsavseatreg: "true",
+             utsavpartreg: "false")

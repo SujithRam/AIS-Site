@@ -1,0 +1,23 @@
+<% provide(:title, 'Registration Disable') %>
+<h2>Activate Forms</h2>
+
+<%= form_for(@reg_disable) do |f| %>
+<div class="table-responsive">
+  <table class="table table-striped">
+  <tr>
+    <td>Enable Student Pickup form?</td>
+    <td><%= f.select :studentreg, [['True','true'],['False','false']], class: 'form-control' %></td>
+  </tr>
+  <tr>
+    <td>Enable Utsav Partcipants Registration Form?</td>
+    <td><%= f.select :utsavpartreg, [['True','true'],['False','false']], class: 'form-control' %></td>
+  </tr>
+  <tr>
+    <td>Enable Utsav Seats Registration Form?</td>
+    <td><%= f.select :utsavseatreg, [['True','true'],['False','false']], class: 'form-control' %></td>
+  </tr>
+  </table>
+</div>
+<%= f.submit "Change Status of Forms", class: "btn btn-primary" %>
+<br/><br/>
+<% end %>

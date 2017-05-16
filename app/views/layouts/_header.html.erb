@@ -7,7 +7,26 @@
 							<nav id="nav">
 								<ul>
 									<% if logged_in? %>
-									<% if logged_normuser? %>
+									<% if logged_adminuser? %> <!-- admin options -->
+									<li><%= link_to "Home",   root_path, { :class=>"icon fa-home", :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "Dashboard", current_user, { :class=>"icon fa-calendar", :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li><%= link_to "Arriving Students", registrations_path, { :class=>"icon fa-users", :style=>"font-family:'Source Sans Pro'" } %></li>
+									<li class="dropdown">
+  									<a href="javascript:void(0)" class="dropbtn icon fa-calendar" onclick="myFunction1()">Utsav</a>
+    									<div class="dropdown-content" id="myDropdown1">
+     											<%= link_to "Utsav Seat Reservations", utsav_seats_path, {  :style=>"font-family:'Source Sans Pro'" } %>
+													<%= link_to "Utsav Participants", utsav_registrations_path, {  :style=>"font-family:'Source Sans Pro'" } %>
+    									</div>
+  								</li>
+  								<li class="dropdown">
+  									<a href="javascript:void(0)" class="dropbtn icon fa-cogs" onclick="myFunction()">Settings</a>
+    									<div class="dropdown-content" id="myDropdown">
+     											<%= link_to "Database Administration", reg_disables_path, { :style=>"font-family:'Source Sans Pro'" } %>
+													<%= link_to "Forms Status", edit_reg_disable_path(1), {  :style=>"font-family:'Source Sans Pro'" } %>
+    									</div>
+  								</li>
+									<li><%= link_to "Log out", logout_path, { :class=>"icon fa-exclamation",  :style=>"font-family:'Source Sans Pro'" } %></li>
+									<% elsif logged_normuser? %>
 									<li><%= link_to "Home",   root_path, { :class=>"icon fa-home", :style=>"font-family:'Source Sans Pro'" } %></li>
 									<li><%= link_to "Dashboard", current_user, { :class=>"icon fa-calendar", :style=>"font-family:'Source Sans Pro'" } %></li>
 									<li><%= link_to "Arriving Students", registrations_path, { :class=>"icon fa-users", :style=>"font-family:'Source Sans Pro'" } %></li>

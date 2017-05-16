@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'reg_disables/new'
+
+  get 'reg_disables/index'
+
+  get 'reg_disables/edit'
+
+  get 'reg_disables/show'
+
   get 'sessions/new'
 
   get 'registrations/new'
@@ -30,6 +38,14 @@ Rails.application.routes.draw do
   resources :registrations
   resources :utsav_registrations
   resources :utsav_seats
+  
+  resources :reg_disables, except: [:destroy] do
+    collection do
+      delete :remove_all_students
+      delete :remove_all_utsav_registrations
+      delete :remove_all_utsav_seats
+    end 
+  end
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

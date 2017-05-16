@@ -21,6 +21,7 @@ class UtsavSeatsController < ApplicationController
     data = 300 - data
     @utsav_seat = UtsavSeat.new
     @utsav_seat.data = data
+    @data = RegDisable.find('1')
   end
   
   def create

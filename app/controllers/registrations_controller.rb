@@ -4,6 +4,7 @@ class RegistrationsController < ApplicationController
   
   def new
     @registration = Registration.new
+    @data = RegDisable.find('1')
   end
   
   def edit

@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160924135042) do
+ActiveRecord::Schema.define(version: 20170516184003) do
+
+  create_table "reg_disables", force: :cascade do |t|
+    t.string   "studentreg"
+    t.string   "utsavseatreg"
+    t.string   "utsavpartreg"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "regdisables", force: :cascade do |t|
+    t.string   "pgname"
+    t.boolean  "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "registrations", force: :cascade do |t|
     t.string   "name"

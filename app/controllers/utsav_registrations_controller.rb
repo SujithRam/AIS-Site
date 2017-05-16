@@ -4,6 +4,7 @@ class UtsavRegistrationsController < ApplicationController
   
   def new
     @utsav_registration = UtsavRegistration.new
+    @data = RegDisable.find('1')
   end
   
   def create

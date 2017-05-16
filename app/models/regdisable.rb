@@ -1,0 +1,3 @@
+class Regdisable < ApplicationRecord
+  
+end
